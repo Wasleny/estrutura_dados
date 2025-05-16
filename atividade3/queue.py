@@ -46,7 +46,8 @@ class Queue:
         """
         Verifica se a fila está vazia.
         """
-        if self.stack.size == 0:
+
+        if self.stack.size() == 0:
             return True
         
         return False
@@ -76,3 +77,9 @@ print("Removendo...")
 fila.dequeue()
 fila.dequeue()
 print(f"Fila após remoção:\n{fila.stack}")
+
+fila.dequeue()
+fila.dequeue()
+fila.dequeue()
+
+print(fila.is_empty())
